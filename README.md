@@ -6,6 +6,10 @@
 ## Introduction
 
 * [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
+* Basic Unix commands
+* Retrieving latest notes from Github
+* Retrieving data using CURL
+* Basic web services using CURL
 
 ## Relational Databases
 
