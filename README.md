@@ -44,7 +44,10 @@
 * Conditional statements (if-then-else)
 * Loops (for loops, list comprehensions)
 
-### Libraries, Files, Functions
+### Beyond the Basics
+* Functions
+* Libraries
+* Files
 
 ### In-class Exercise: Find Similar Company Names
 
