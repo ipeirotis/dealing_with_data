@@ -1,12 +1,13 @@
+## Prerequisite: Setting up Linux on Amazon EC2
+
+* [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
+
+
 ## Introduction
 
 * [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
 
-## Setting up Linux on Amazon EC2
-
-* [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
-
-## Relational Databases: Entity-Relationship Model and Creating a Database
+## Relational Databases
 
 ### Entity-Relationship Model
 * Entities, Primary Keys, and Attributes
@@ -17,7 +18,7 @@
 * Translating ER Diagrams to Tables
 * SQL Statements for Creating Tables
    
-## Relational Databases: Querying a Database Using SQL
+### Querying a Database Using SQL
 * USE, DESCRIBE queries
 * Selection queries: *, column, column AS, DISTINCT, ORDER BY, LIMIT
 * Where clauses: Boolean conditions, IN, BETWEEN, LIKE
@@ -25,8 +26,27 @@
 * Join queries: INNER JOIN, OUTER JOIN
 * Subqueries and Views
 
-
 ## Introduction to Python
+
+### Primitive Data Types
+* Strings
+* Integers, Floats, and Math operators
+* Booleans
+
+### Complex Data Structures
+* Lists
+* Sets
+* Tuples
+* Dictionaries
+* Nested data structures
+
+### Control Statements
+* Conditional statements (if-then-else)
+* Loops (for loops, list comprehensions)
+
+### Libraries, Files, Functions
+
+### In-class Exercise: Find Similar Company Names
 
 ## Web API's, Crawling & XPath
 
