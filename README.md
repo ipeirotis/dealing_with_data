@@ -30,6 +30,8 @@
 * Join queries: INNER JOIN, OUTER JOIN
 * Subqueries and Views
 
+#### In-class Exercise: Compare Tastes Across Demographic Segments
+
 ## Introduction to Python
 
 ### Primitive Data Types
@@ -53,11 +55,25 @@
 * Libraries
 * Files
 
-### In-class Exercise: Find Similar Company Names
+#### In-class Exercise: Find Similar Company Names
+
+## Regular Expressions
+
+* Atoms
+* Anchoring expressions
+* Repetition and Grouping operators
+
+#### In-class Exercise: Extract Email from Web Page
 
 ## Web API's, Crawling & XPath
 
-## Regular Expressions
+* Python and Web APIs
+* Beyond the Basics: Parameters and Headers
+* (advanced) Using OAuth for authentication
+* XPath
+* Crawling Websites
+
+#### In-class Exercise: Retrieve Buzzfeed articles
 
 ## Processing Data using Python Pandas
 
