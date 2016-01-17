@@ -2,7 +2,6 @@
 
 * [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
 
-
 ## Introduction
 
 * [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
@@ -11,6 +10,8 @@
 * Retrieving data using CURL
 * Basic web services using CURL
 
+##### In class: Find Web API using Mashape, issue requests using CURL
+
 ## Relational Databases
 
 ### Entity-Relationship Model
@@ -18,10 +19,12 @@
 * Relations
 * Cardinality: One-to-One, One-to-Many, Many-to-Many
 
+##### In class: Artist-Gallery-Painting example
+
 ### From ER Diagram to SQL Tables
 * Translating ER Diagrams to Tables
 * SQL Statements for Creating Tables
-   
+
 ### Querying a Database Using SQL
 * USE, DESCRIBE queries
 * Selection queries: *, column, column AS, DISTINCT, ORDER BY, LIMIT
@@ -30,7 +33,7 @@
 * Join queries: INNER JOIN, OUTER JOIN
 * Subqueries and Views
 
-#### In-class Exercise: Compare Tastes Across Demographic Segments
+##### In-class Exercise: Compare Tastes Across Demographic Segments
 
 ## Introduction to Python
 
@@ -55,7 +58,7 @@
 * Libraries
 * Files
 
-#### In-class Exercise: Find Similar Company Names
+##### In-class Exercise: Find Similar Company Names
 
 ## Regular Expressions
 
@@ -63,7 +66,7 @@
 * Anchoring expressions
 * Repetition and Grouping operators
 
-#### In-class Exercise: Extract Email from Web Page
+##### In-class Exercise: Extract Email from Web Page
 
 ## Web API's, Crawling & XPath
 
@@ -73,7 +76,15 @@
 * XPath
 * Crawling Websites
 
-#### In-class Exercise: Retrieve Buzzfeed articles
+##### In-class Exercise: Retrieve Buzzfeed articles
+
+## Python and Databases
+
+* Interacting with a database using Python
+* Inserting data in a database using Python
+* Retrieving data from a database using Python
+
+##### In-class Exercise: Retrieve live weather or Citibike data and insert in database
 
 ## Processing Data using Python Pandas
 
