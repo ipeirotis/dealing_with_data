@@ -35,6 +35,10 @@
 
 ##### In-class Exercise: Compare Tastes Across Demographic Segments
 
+### Additional Resources
+
+* [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
+
 ## Introduction to Python
 
 ### Primitive Data Types
