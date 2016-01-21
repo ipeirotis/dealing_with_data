@@ -2,7 +2,7 @@
 
 * [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
 
-## Introduction
+## The Basics: SSH, command-line, CURL
 
 * [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
 * Basic Unix commands
