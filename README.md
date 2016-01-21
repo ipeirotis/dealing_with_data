@@ -35,9 +35,11 @@
 
 ##### In-class Exercise: Compare Tastes Across Demographic Segments
 
-### Additional Resources
+#### Additional Resources
 
 * [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
+* [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
+* [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
 
 ## Introduction to Python
 
