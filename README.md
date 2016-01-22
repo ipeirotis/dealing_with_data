@@ -73,6 +73,7 @@
 * [Google’s Python class](https://developers.google.com/edu/python/)
 * [Official Python 2 Tutorial](https://docs.python.org/2/tutorial/index.html)
 * [Useful iPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks): A wide variety of useful tutorials in iPython Notebooks for a wide variety of topics
+* [Quantitative Economics](http://quant-econ.net/py/): An introduction to scientific computing using Python, by Thomas J. Sargent and John Stachurski
 
 ## Regular Expressions
 
