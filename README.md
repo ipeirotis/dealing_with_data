@@ -66,6 +66,14 @@
 
 ##### In-class Exercise: Find Similar Company Names
 
+#### Additional Resources
+
+* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): A great introduction to programming and Python. It targets complete beginners, and can be tedious at times but it is universally considered one of the standard textbooks for learning Python. You can buy the print version, or read it online for free
+* [Code Academy, Python class](https://www.codecademy.com/learn/python): This is a useful interactive tutorial for beginners, who are trying to understand programming in general, and Python in particular
+* [Google’s Python class](https://developers.google.com/edu/python/)
+* [Official Python 2 Tutorial](https://docs.python.org/2/tutorial/index.html)
+* [Useful iPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks): A wide variety of useful tutorials in iPython Notebooks for a wide variety of topics
+
 ## Regular Expressions
 
 * Atoms
