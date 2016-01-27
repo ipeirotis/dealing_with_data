@@ -2,7 +2,7 @@
 
 * [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
 
-## Introduction
+## The Basics: SSH, command-line, CURL
 
 * [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
 * Basic Unix commands
@@ -35,6 +35,12 @@
 
 ##### In-class Exercise: Compare Tastes Across Demographic Segments
 
+#### Additional Resources
+
+* [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
+* [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
+* [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
+
 ## Introduction to Python
 
 ### Primitive Data Types
@@ -59,6 +65,15 @@
 * Files
 
 ##### In-class Exercise: Find Similar Company Names
+
+#### Additional Resources
+
+* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): A great introduction to programming and Python. It targets complete beginners, and can be tedious at times but it is universally considered one of the standard textbooks for learning Python. You can buy the print version, or read it online for free
+* [Code Academy, Python class](https://www.codecademy.com/learn/python): This is a useful interactive tutorial for beginners, who are trying to understand programming in general, and Python in particular
+* [Google’s Python class](https://developers.google.com/edu/python/)
+* [Official Python 2 Tutorial](https://docs.python.org/2/tutorial/index.html)
+* [Useful iPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks): A wide variety of useful tutorials in iPython Notebooks for a wide variety of topics
+* [Quantitative Economics](http://quant-econ.net/py/): An introduction to scientific computing using Python, by Thomas J. Sargent and John Stachurski
 
 ## Regular Expressions
 
