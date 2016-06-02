@@ -77,6 +77,7 @@
 * [Useful iPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks): A wide variety of useful tutorials in iPython Notebooks for a wide variety of topics
 * [Quantitative Economics](http://quant-econ.net/py/): An introduction to scientific computing using Python, by Thomas J. Sargent and John Stachurski
 * [How To Think Like a Computer Scientist](http://interactivepython.org/runestone/static/thinkcspy/toc.html#t-o-c): An interactive guide to programming and Python
+* The following Coursera courses [Getting Started with Python](https://www.coursera.org/learn/python), [Python Data Structures](https://www.coursera.org/learn/python-data), [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data), [Using Databases with Python](https://www.coursera.org/learn/python-databases), [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) are well-alinged with the objectives of our class. Similarly, this book on Python [Python for Informatics: Exploring Information](http://www.pythonlearn.com/book.php) is also a great supplement for our class. 
 
 ## Regular Expressions
 
