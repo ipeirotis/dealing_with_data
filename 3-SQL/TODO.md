@@ -8,5 +8,6 @@
 
 * We can have two 1hr15min lectures on modeling. We can compress the ER diagram discussion and cover ER design and translation into tables (foreign keys for 1-1, 1-many; bridge tables for many-many). Then in the second lecture we do the Water Utility Database discussion, together with MySQL workbench, and CREATE TABLE queries.
 
-* Most probably we will need longer for the SELECT statements than a single session
-* Do JOIN before GROUP BY.
+* Most probably we will need longer for the SELECT statements than a single session. Right now, we get into the SELECT/WHERE queries for IMDB, but do not have time for LIKE, IS NULL.  
+
+* To teach GROUP BY, makes sense to first show the same query with ORDER BY, and then explain that we collapse each of the "groups" using COUNT/AVG/MIN/MAX/etc.
