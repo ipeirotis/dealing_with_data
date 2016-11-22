@@ -11,3 +11,12 @@
 * Most probably we will need longer for the SELECT statements than a single session. Right now, we get into the SELECT/WHERE queries for IMDB, but do not have time for LIKE, IS NULL.  
 
 * To teach GROUP BY, makes sense to first show the same query with ORDER BY, and then explain that we collapse each of the "groups" using COUNT/AVG/MIN/MAX/etc.
+
+* Ended up needing extra two sessions compared to the planned sessions. We can gain one sessions by compressing ER discussion, but cannot compress more and still cover SQL nicely.
+
+Practice
+
+Read the "Learning MySQL" textbook, chapter 7.
+Work on the online SQL Tutorial by W3Scools
+Work on the SQL course on Code Academy
+Work on the SQL course on Khan Academy
