@@ -1,0 +1,1 @@
+sudo kill $(pgrep jupyter)
