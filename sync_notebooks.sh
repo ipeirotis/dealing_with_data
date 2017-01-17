@@ -12,7 +12,7 @@ read -p "Are you sure that you want to proceed? (Y/N) " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  cd /home/ubunty/jupyter
+  cd /home/ubuntu/jupyter
   rm -rf NYU_Notes
   git clone https://github.com/ipeirotis/dealing_with_data.git NYU_Notes
   cd
