@@ -1,1 +1,1 @@
-sudo jupyter notebook --notebook-dir=/home/ubuntu/jupyter > /tmp/jupyter.out 2>&1 &
+jupyter notebook --notebook-dir=/home/ubuntu/jupyter > /tmp/jupyter.out 2>&1 &
