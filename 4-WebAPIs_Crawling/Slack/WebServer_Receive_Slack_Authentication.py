@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # This part creates a web server that will "receive" the requests by Slack
 # in the `redirect_uri`
 
@@ -15,11 +17,17 @@ import json
 # Get these after registering an app with Slack
 # These are to communicate to Slack that the requests come
 # from a legitimate, registered app
-CLIENT_ID = '3417815998.64093686112'
-CLIENT_SECRET = 'ddc9272e1e9d103b11b004b9505567d6'
+CLIENT_ID = '132047100118.138397544871'
+CLIENT_SECRET = '271fba7fd2247075cbdd980bd5b548ab'
 
 # This is the location where we will store the authentication data from Slack
 OAUTH_FILE = 'slack_secret.json'
+
+    
+# Initialize the Flask web server
+# We create a folder "plots" where we are going to store
+# plots to post them (later on) as messages to Slack channels
+webserver = Flask("SlackOAuth", static_folder='plots')
 
 
 # This is the place where the webserver will receive the call from Slack
@@ -37,7 +45,7 @@ def oauth_helper():
               "client_id": CLIENT_ID, 
               "client_secret": CLIENT_SECRET, 
               "code": code,
-              "redirect_uri": "http://ipython-panos.ipeirotis.com:5000/slack"}
+              "redirect_uri": "http://ipython.ipeirotis.com:5000/slack"}
     resp = requests.get(url, params=params)
     data = json.loads(resp.text)
     
@@ -61,7 +69,7 @@ def oauth_helper():
 # that we create on the server
 @webserver.route('/plots/<path:path>')
 def static_proxy(path):
-  return webserver.send_static_file(path)
+    return webserver.send_static_file(path)
 
 
 def start_server():
@@ -73,11 +81,7 @@ def stop_server():
     shutdown_after_request()
     return
     
-    
-# Initialize the Flask web server
-# We create a folder "plots" where we are going to store
-# plots to post them (later on) as messages to Slack channels
-webserver = Flask("SlackOAuth", static_folder='plots')
+
 
     
 # And now start the webserver so that we can receive the answer from Slack API
