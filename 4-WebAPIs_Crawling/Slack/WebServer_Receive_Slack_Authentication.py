@@ -17,8 +17,8 @@ import json
 # Get these after registering an app with Slack
 # These are to communicate to Slack that the requests come
 # from a legitimate, registered app
-CLIENT_ID = '132047100118.138397544871'
-CLIENT_SECRET = '271fba7fd2247075cbdd980bd5b548ab'
+CLIENT_ID = '132047100118.137144102401'
+CLIENT_SECRET = '71b7d5e4e062f9c12b864f472f1e2e4e'
 
 # This is the location where we will store the authentication data from Slack
 OAUTH_FILE = 'slack_secret.json'
@@ -29,6 +29,23 @@ OAUTH_FILE = 'slack_secret.json'
 # plots to post them (later on) as messages to Slack channels
 webserver = Flask("SlackOAuth", static_folder='plots')
 
+
+slack_url = "https://slack.com/oauth/authorize"
+client_id = '132047100118.137144102401'
+redirect_uri = 'http://ipython.ipeirotis.com:5000/slack' 
+permissions = 'client'
+
+# This URL will just have a link that the user clicks to install
+# the Slack bot
+@webserver.route("/install")
+def install_bot():
+    url = (slack_url + 
+    '?response_type=code' + 
+    '&client_id='+ client_id + 
+    '&scope=' + permissions +
+    '&redirect_uri=' + redirect_uri )
+    
+    return '<html><body><a href="'+url+'"><b>Install Slack Bot</b></a></body></html>'
 
 # This is the place where the webserver will receive the call from Slack
 # The call from Slack will have a parameter "code"
