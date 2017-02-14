@@ -14,11 +14,17 @@ from flask import Flask, request
 import requests
 import json
 
+SLACK_URL = "https://slack.com/oauth/authorize"
+
 # Get these after registering an app with Slack
 # These are to communicate to Slack that the requests come
-# from a legitimate, registered app
+# from a legitimate, registered app. Ensure that you 
+# put your own client details here
 CLIENT_ID = '132047100118.137144102401'
 CLIENT_SECRET = '71b7d5e4e062f9c12b864f472f1e2e4e'
+# You need to put your own IP address here and register it under "OAuth & Permissions"
+REDIRECT = 'http://ipython.ipeirotis.com:5000/slack' 
+PERMISSIONS = 'client'
 
 # This is the location where we will store the authentication data from Slack
 OAUTH_FILE = 'slack_secret.json'
@@ -29,21 +35,15 @@ OAUTH_FILE = 'slack_secret.json'
 # plots to post them (later on) as messages to Slack channels
 webserver = Flask("SlackOAuth", static_folder='plots')
 
-
-slack_url = "https://slack.com/oauth/authorize"
-client_id = '132047100118.137144102401'
-redirect_uri = 'http://ipython.ipeirotis.com:5000/slack' 
-permissions = 'client'
-
 # This URL will just have a link that the user clicks to install
 # the Slack bot
 @webserver.route("/install")
 def install_bot():
-    url = (slack_url + 
+    url = (SLACK_URL + 
     '?response_type=code' + 
-    '&client_id='+ client_id + 
-    '&scope=' + permissions +
-    '&redirect_uri=' + redirect_uri )
+    '&client_id='+ CLIENT_ID + 
+    '&scope=' + PERMISSIONS +
+    '&redirect_uri=' + REDIRECT )
     
     return '<html><body><a href="'+url+'"><b>Install Slack Bot</b></a></body></html>'
 
@@ -62,9 +62,10 @@ def oauth_helper():
               "client_id": CLIENT_ID, 
               "client_secret": CLIENT_SECRET, 
               "code": code,
-              "redirect_uri": "http://ipython.ipeirotis.com:5000/slack"}
+              "redirect_uri": REDIRECT}
     resp = requests.get(url, params=params)
     data = json.loads(resp.text)
+    userid = data["user_id"]
     
     # We store the code in a file as the webserver does not interact with the 
     # rest of the Python code, and we also want to reuse the code in the future
@@ -74,16 +75,17 @@ def oauth_helper():
     f.close()
     
     # If we start the server just to get the code, it is safe (and convenient) 
-    # to shut down the web server after this request. For Slack, we will 
-    # use the web server to send plots.
-    # stop_server()
+    # to shut down the web server after this request. 
+    stop_server()
     
     # What we return here has no real impact on the functionality of the code
     return '<html><body>Code: <b>'+code+'</b><p>Response:<b>'+resp.text+'</b></body></html>'
 
 
 # This allows us to server files (in our case, images)
-# that we create on the server
+# that we create on the server.
+# You can start the server from a notebook using
+# the "%run WebServer_Receive_Slack_Authentication.py" command
 @webserver.route('/plots/<path:path>')
 def static_proxy(path):
     return webserver.send_static_file(path)
