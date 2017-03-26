@@ -97,4 +97,10 @@
 * [Google Public Data Explorer](http://www.google.com/publicdata/directory)
 
 
-
+#### Aggregate lists of data sets
+* [30 Places to Find Open Data on the Web, by Romy Misra of Visual.ly](http://blog.visual.ly/data-sources/)
+* [Interesting datasets and APIs, by Prof. James Bagrow](http://bagrow.com/dsv/datasets.html)
+* [Datasets for Data Mining and Data Science, by KDnugets](http://www.kdnuggets.com/datasets/index.html)
+* [Research-quality data sets, by Hilary Mason](http://bitly.com/bundles/hmason/1)
+* [Reddit list of interesting data sets](http://www.reddit.com/r/datasets/)
+* [Finding Data on the Internet by Revolution Analytics](http://www.inside-r.org/howto/finding-data-internet)
