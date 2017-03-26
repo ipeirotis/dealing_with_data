@@ -79,34 +79,22 @@
 * [How To Think Like a Computer Scientist](http://interactivepython.org/runestone/static/thinkcspy/toc.html#t-o-c): An interactive guide to programming and Python
 * The following Coursera courses [Getting Started with Python](https://www.coursera.org/learn/python), [Python Data Structures](https://www.coursera.org/learn/python-data), [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data), [Using Databases with Python](https://www.coursera.org/learn/python-databases), [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) are well-alinged with the objectives of our class. Similarly, this book on Python [Python for Informatics: Exploring Information](http://www.pythonlearn.com/book.php) is also a great supplement for our class. 
 
-## Regular Expressions
+#### Interesting data sources
+* [NASDAQ](https://data.nasdaq.com/)
+* [CBOE Futures Exchange](http://cfe.cboe.com/Data/)
+* [Quandl: Finance and Economics Data](http://www.quandl.com/)
+* [Enron Email Dataset](http://www.cs.cmu.edu/~enron/)
+* [Lending Club](https://www.lendingclub.com/info/download-data.action)
+* [World Bank Data](http://data.worldbank.org/)
+* [Unicef Data](http://www.unicef.org/sowc09/statistics/tables.php)
+* [US Census Data](http://www.census.gov/data.html)
+* [Yahoo Labs Data](http://webscope.sandbox.yahoo.com/catalog.php)
+* [World Health Organization](http://www.who.int/research/en/)
+* [The New York Times Data APIs](http://developer.nytimes.com/docs)
+* [Weather Underground Data API](http://www.wunderground.com/weather/api/?MR=1)
+* [NYC Open Data](https://data.cityofnewyork.us/)
+* [U.S. Government’s open data](https://www.data.gov/)
+* [Google Public Data Explorer](http://www.google.com/publicdata/directory)
 
-* Atoms
-* Anchoring expressions
-* Repetition and Grouping operators
 
-##### In-class Exercise: Extract Email from Web Page
 
-## Web API's, Crawling & XPath
-
-* Python and Web APIs
-* Beyond the Basics: Parameters and Headers
-* (advanced) Using OAuth for authentication
-* XPath
-* Crawling Websites
-
-##### In-class Exercise: Retrieve Buzzfeed articles
-
-## Python and Databases
-
-* Interacting with a database using Python
-* Inserting data in a database using Python
-* Retrieving data from a database using Python
-
-##### In-class Exercise: Retrieve live weather or Citibike data and insert in database
-
-## Processing Data using Python Pandas
-
-## Data Plotting and Visualization
-
-## Text Mining and Natural Language Processing
