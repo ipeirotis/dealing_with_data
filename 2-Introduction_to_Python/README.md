@@ -34,28 +34,15 @@
 * [How To Think Like a Computer Scientist](http://interactivepython.org/runestone/static/thinkcspy/toc.html#t-o-c): An interactive guide to programming and Python
 * The following Coursera courses [Getting Started with Python](https://www.coursera.org/learn/python), [Python Data Structures](https://www.coursera.org/learn/python-data), [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data), [Using Databases with Python](https://www.coursera.org/learn/python-databases), [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) are well-alinged with the objectives of our class. Similarly, this book on Python [Python for Informatics: Exploring Information](http://www.pythonlearn.com/book.php) is also a great supplement for our class. 
 
-#### Interesting data sources
-* [NASDAQ](https://data.nasdaq.com/)
-* [CBOE Futures Exchange](http://cfe.cboe.com/Data/)
-* [Quandl: Finance and Economics Data](http://www.quandl.com/)
-* [Enron Email Dataset](http://www.cs.cmu.edu/~enron/)
-* [Lending Club](https://www.lendingclub.com/info/download-data.action)
-* [World Bank Data](http://data.worldbank.org/)
-* [Unicef Data](http://www.unicef.org/sowc09/statistics/tables.php)
-* [US Census Data](http://www.census.gov/data.html)
-* [Yahoo Labs Data](http://webscope.sandbox.yahoo.com/catalog.php)
-* [World Health Organization](http://www.who.int/research/en/)
-* [The New York Times Data APIs](http://developer.nytimes.com/docs)
-* [Weather Underground Data API](http://www.wunderground.com/weather/api/?MR=1)
-* [NYC Open Data](https://data.cityofnewyork.us/)
-* [U.S. Government’s open data](https://www.data.gov/)
-* [Google Public Data Explorer](http://www.google.com/publicdata/directory)
+## Python Exercises
 
+* http://www.pyschools.com/ [highly recommended]
+* http://www.singpath.com/#/paths
+* http://learnpython.org/
+* http://www.practicepython.org/
+* http://www.codeabbey.com/index/task_list
+* http://codingbat.com/python
+* http://usingpython.com/python-programming-challenges/
+* http://www.openbookproject.net/pybiblio/practice/elkner/
+* http://www.openbookproject.net/pybiblio/practice/wilson/
 
-#### Aggregate lists of data sets
-* [30 Places to Find Open Data on the Web, by Romy Misra of Visual.ly](http://blog.visual.ly/data-sources/)
-* [Interesting datasets and APIs, by Prof. James Bagrow](http://bagrow.com/dsv/datasets.html)
-* [Datasets for Data Mining and Data Science, by KDnugets](http://www.kdnuggets.com/datasets/index.html)
-* [Research-quality data sets, by Hilary Mason](http://bitly.com/bundles/hmason/1)
-* [Reddit list of interesting data sets](http://www.reddit.com/r/datasets/)
-* [Finding Data on the Internet by Revolution Analytics](http://www.inside-r.org/howto/finding-data-internet)
