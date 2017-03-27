@@ -35,6 +35,7 @@
 * [Open Data Discussion](http://opendata.stackexchange.com/questions?sort=votes)
 
 ## Related Courses
+* [Data Analytics for Business](http://inseaddataanalytics.github.io/INSEADAnalytics/), [Projects](http://inseaddataanalytics.github.io/INSEADAnalytics/ProjectsMenu.html)
 * [Udacity Intro to Data Science](https://www.udacity.com/course/ud359)
 * [Udacity Data Wrangling with MongoDB](https://www.udacity.com/course/ud032)
 * [Harvard CS 109](http://cs109.org/schedule.php)
