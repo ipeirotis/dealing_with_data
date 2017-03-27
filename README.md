@@ -2,111 +2,21 @@
 
 * [Setting up a Linux machine on Amazon EC2](https://docs.google.com/document/d/1A5Y53eqBRRlrVMV-yLrpA9-3xZ3jQmv9i6qhOU5gn44/edit)
 
-## The Basics: SSH, command-line, CURL
+## Data Sets
 
-* [How to use a terminal on Windows and Mac](https://docs.google.com/document/d/1bn0GdEK5vvzbxkpOyRW1Zy0WkRuhIz6PkbQPaE7uUyo/edit)
-* Basic Unix commands
-* Retrieving latest notes from Github
-* Retrieving data using CURL
-* Basic web services using CURL
+* [List of interesting data sets](DATA_SOURCES.md)
 
-##### In class: Find Web API using Mashape, issue requests using CURL
+## Related Courses
+* [Data Analytics for Business](http://inseaddataanalytics.github.io/INSEADAnalytics/), [Projects](http://inseaddataanalytics.github.io/INSEADAnalytics/ProjectsMenu.html)
+* [Udacity Intro to Data Science](https://www.udacity.com/course/ud359)
+* [Udacity Data Wrangling with MongoDB](https://www.udacity.com/course/ud032)
+* [Harvard CS 109](http://cs109.org/schedule.php)
+* [CU Boulder Research Computing Fall 2013 meetup](https://github.com/ResearchComputing/Meetup-Fall-2013)
+* [Udacity Exploratory Data Analysis](https://www.udacity.comcourse/ud651)
+* [USC COMM 620 Data Retrieval and Processing Techniques](http://www-bcf.usc.edu/~ljian/courses/large_data_syllabus.html)
+* [NYU/Stern Practical Data Science](http://jattenberg.github.io/PDS-Fall-2013/)
+* [Columbia Data Science](http://columbiadatascience.com/2012/08/29/syllabus/)
+* [UW-IS school Introduction to Data Science](http://www.jblumenstock.com/teaching/course=infx598)
+* [MIT’s How to Process, Analyze and Visualize Data](http://dataiap.github.io/dataiap/) [github](https://github.com/dataiap/dataiap)
+* [MIT’s ASCII to Answers](http://db.csail.mit.edu/6.885/) [github](https://github.com/mitdbg/asciiclass)
 
-## Relational Databases
-
-### Entity-Relationship Model
-* Entities, Primary Keys, and Attributes
-* Relations
-* Cardinality: One-to-One, One-to-Many, Many-to-Many
-
-##### In class: Artist-Gallery-Painting example
-
-### From ER Diagram to SQL Tables
-* Translating ER Diagrams to Tables
-* SQL Statements for Creating Tables
-
-### Querying a Database Using SQL
-* USE, DESCRIBE queries
-* Selection queries: *, column, column AS, DISTINCT, ORDER BY, LIMIT
-* Where clauses: Boolean conditions, IN, BETWEEN, LIKE
-* Aggregation queries: GROUP BY, SUM, AVG, MAX, MIN, ROLLUP
-* Join queries: INNER JOIN, OUTER JOIN
-* Subqueries and Views
-
-##### In-class Exercise: Compare Tastes Across Demographic Segments
-
-#### Additional Resources
-
-* [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) from Khan Academy. Introductory course, with videos explaining the various aspects of SQL.
-* [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
-* [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
-* [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
-
-
-## Introduction to Python
-
-### Primitive Data Types
-* Strings
-* Integers, Floats, and Math operators
-* Booleans
-
-### Complex Data Structures
-* Lists
-* Sets
-* Tuples
-* Dictionaries
-* Nested data structures
-
-### Control Statements
-* Conditional statements (if-then-else)
-* Loops (for loops, list comprehensions)
-
-### Beyond the Basics
-* Functions
-* Libraries
-* Files
-
-##### In-class Exercise: Find Similar Company Names
-
-#### Additional Resources
-
-* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): A great introduction to programming and Python. It targets complete beginners, and can be tedious at times but it is universally considered one of the standard textbooks for learning Python. You can buy the print version, or read it online for free
-* [Code Academy, Python class](https://www.codecademy.com/learn/python): This is a useful interactive tutorial for beginners, who are trying to understand programming in general, and Python in particular
-* [Google’s Python class](https://developers.google.com/edu/python/)
-* [Official Python 2 Tutorial](https://docs.python.org/2/tutorial/index.html)
-* [Useful iPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks): A wide variety of useful tutorials in iPython Notebooks for a wide variety of topics
-* [Quantitative Economics](http://quant-econ.net/py/): An introduction to scientific computing using Python, by Thomas J. Sargent and John Stachurski
-* [How To Think Like a Computer Scientist](http://interactivepython.org/runestone/static/thinkcspy/toc.html#t-o-c): An interactive guide to programming and Python
-* The following Coursera courses [Getting Started with Python](https://www.coursera.org/learn/python), [Python Data Structures](https://www.coursera.org/learn/python-data), [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data), [Using Databases with Python](https://www.coursera.org/learn/python-databases), [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) are well-alinged with the objectives of our class. Similarly, this book on Python [Python for Informatics: Exploring Information](http://www.pythonlearn.com/book.php) is also a great supplement for our class. 
-
-## Regular Expressions
-
-* Atoms
-* Anchoring expressions
-* Repetition and Grouping operators
-
-##### In-class Exercise: Extract Email from Web Page
-
-## Web API's, Crawling & XPath
-
-* Python and Web APIs
-* Beyond the Basics: Parameters and Headers
-* (advanced) Using OAuth for authentication
-* XPath
-* Crawling Websites
-
-##### In-class Exercise: Retrieve Buzzfeed articles
-
-## Python and Databases
-
-* Interacting with a database using Python
-* Inserting data in a database using Python
-* Retrieving data from a database using Python
-
-##### In-class Exercise: Retrieve live weather or Citibike data and insert in database
-
-## Processing Data using Python Pandas
-
-## Data Plotting and Visualization
-
-## Text Mining and Natural Language Processing
