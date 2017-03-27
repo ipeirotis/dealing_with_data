@@ -1,4 +1,16 @@
-## Relational Databases
+## Relational Databases and SQL
+
+This is a brief introductory module to relational databases and SQL. It mainly targets people that are interested in learning SQL, and does not cover topics such as indexing, transactions, stored procedures, etc.
+
+
+## Additional Resources for Learning SQL
+
+* [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) from Khan Academy. Introductory course, with videos explaining the various aspects of SQL.
+* [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
+* [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
+* [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
+
+### Indicative Syllabus
 
 ### Entity-Relationship Model
 * Entities, Primary Keys, and Attributes
@@ -20,12 +32,3 @@
 * Subqueries and Views
 
 ##### In-class Exercise: Compare Tastes Across Demographic Segments
-
-#### Additional Resources
-
-* [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) from Khan Academy. Introductory course, with videos explaining the various aspects of SQL.
-* [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
-* [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
-* [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
-
-
