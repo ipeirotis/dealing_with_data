@@ -27,6 +27,7 @@ This is a set of notes used for teaching Python to students that have never used
 * http://usingpython.com/python-programming-challenges/
 * http://www.openbookproject.net/pybiblio/practice/elkner/
 * http://www.openbookproject.net/pybiblio/practice/wilson/
+* https://github.com/donnemartin/interactive-coding-challenges
 
 ## Indicative Syllabus and Pointers to Readings
 
