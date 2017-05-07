@@ -8,6 +8,7 @@ This is a brief introductory module to relational databases and SQL. It mainly t
 * [Introduction to SQL](https://www.khanacademy.org/computing/computer-programming/sql) from Khan Academy. Introductory course, with videos explaining the various aspects of SQL.
 * [W3Schools SQL](http://www.w3schools.com/sql/): An introduction to SQL with hands-on examples
 * [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
+* [SQL Tutorial](http://www.w3resource.com/sql/tutorials.php) 
 * [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
 
 ### Indicative Syllabus
