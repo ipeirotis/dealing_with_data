@@ -1,3 +1,4 @@
+* [Cheat sheets for Pandas](https://medium.com/@kailashahirwar/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5)
 * [fecon235 :: Computational data tools for financial economics](https://github.com/rsvp/fecon235)
 * [Timeseries Classification: KNN & DTW](http://nbviewer.jupyter.org/github/markdregan/K-Nearest-Neighbors-with-Dynamic-Time-Warping/blob/master/K_Nearest_Neighbor_Dynamic_Time_Warping.ipynb)
 * [Timeseries with pandas](http://nbviewer.jupyter.org/github/changhiskhan/talks/blob/master/pydata2012/pandas_timeseries.ipynb)
