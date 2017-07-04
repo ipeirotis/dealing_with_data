@@ -16,7 +16,7 @@ This is a brief introductory module to relational databases and SQL. It mainly t
 * [Best practices for SQL](https://data36.com/sql-best-practices-data-analysts/): A set of useful guidelines for writing readable SQL statements.
 
 
-### Indicative Syllabus
+## Indicative Syllabus
 
 ### Entity-Relationship Model
 * Entities, Primary Keys, and Attributes
