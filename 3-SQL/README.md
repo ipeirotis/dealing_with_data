@@ -11,7 +11,12 @@ This is a brief introductory module to relational databases and SQL. It mainly t
 * [SQL Tutorial](http://www.w3resource.com/sql/tutorials.php) 
 * [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
 
-### Indicative Syllabus
+## Useful Pointers
+
+* [Best practices for SQL](https://data36.com/sql-best-practices-data-analysts/): A set of useful guidelines for writing readable SQL statements.
+
+
+## Indicative Syllabus
 
 ### Entity-Relationship Model
 * Entities, Primary Keys, and Attributes
