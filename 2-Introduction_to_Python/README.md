@@ -4,7 +4,7 @@ This is a set of notes used for teaching Python to students that have never used
 
 ## Additional Resources for Learning Python
 
-* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/): A great introduction to programming and Python. It targets complete beginners, and can be tedious at times but it is universally considered one of the standard textbooks for learning Python. You can buy the print version, or read it online for free
+* [Learn Python the Hard Way](https://learnpythonthehardway.org/python3/): A great introduction to programming and Python. It targets complete beginners, and can be tedious at times but it is universally considered one of the standard textbooks for learning Python. You can buy the print version, or read it online for free
 * [Code Academy, Python class](https://www.codecademy.com/learn/python): This is a useful interactive tutorial for beginners, who are trying to understand programming in general, and Python in particular
 * [Google’s Python class](https://developers.google.com/edu/python/)
 * [Official Python 2 Tutorial](https://docs.python.org/3/tutorial/index.html)
