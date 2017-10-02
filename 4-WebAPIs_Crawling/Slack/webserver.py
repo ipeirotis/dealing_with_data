@@ -10,16 +10,8 @@ import json
 
 SLACK_URL = "https://slack.com/oauth/authorize"
 
-# Get these after registering an app with Slack
-# These are to communicate to Slack that the requests come
-# from a legitimate, registered app. Ensure that you 
-# put your own client details here
-CLIENT_ID = '237811062240.249897857907'
-CLIENT_SECRET = 'd627fa20adfe66935a59154b02d2f6fc'
-# You need to put your own IP address here and register it under "OAuth & Permissions"
-REDIRECT = 'http://ipython.ipeirotis.com:5000/slack' 
-PERMISSIONS = 'client'
-
+# Edit this file to add your own client details in the slack_app.json file
+CONFIG_FILE = 'slack_app.json'
 # This is the location where we will store the authentication data from Slack
 OAUTH_FILE = 'slack_secret.json'
  
@@ -63,12 +55,12 @@ def oauth_helper():
     # rest of the Python code, and we also want to reuse the code in the future
     # (Typically, we would store the access_token in a database.)
     f = open(OAUTH_FILE, 'w') # Store the code as a file
-    f.write(resp.text)
+    f.write(resp.text + '\n')
     f.close()
     
     # If we start the server just to get the code, it is safe (and convenient) 
     # to shut down the web server after this request. 
-    stop_server()
+    # stop_server()
     
     # What we return here has no real impact on the functionality of the code
     # Normally, we would just redirect the user to a "Thank you" page.
@@ -88,4 +80,18 @@ def static_proxy(path):
     
 
 if __name__ == '__main__':
+    
+    # We open the CONFIG file here and read the details for the app
+    f = open(CONFIG_FILE, 'r') 
+    content = f.read()
+    f.close()
+    config= json.loads(content)
+    CLIENT_ID = config['CLIENT_ID']
+    CLIENT_SECRET = config['CLIENT_SECRET']
+    REDIRECT = config['REDIRECT']
+    PERMISSIONS = config['PERMISSIONS']
     webserver.run(host='0.0.0.0', port=5000, debug=True)
+
+    
+   
+
