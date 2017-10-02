@@ -1,0 +1,6 @@
+{
+"CLIENT_ID" : "_Your_own_client_id_",
+"CLIENT_SECRET" : "_Your_own_client_secret_",
+"REDIRECT" : "http://YourIPaddress:5000/slack",
+"PERMISSIONS" : "client"
+}
