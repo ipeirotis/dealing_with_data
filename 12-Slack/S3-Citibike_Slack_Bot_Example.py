@@ -1,4 +1,9 @@
 
+# coding: utf-8
+
+# In[1]:
+
+
 import time
 import arrow
 import re
@@ -6,6 +11,9 @@ import requests
 import json
 import MySQLdb as mdb
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 from slackclient import SlackClient
 
@@ -25,7 +33,7 @@ def message_is_for_our_bot(user_id, message_text):
     return match != None 
 
 
-# In[35]:
+# In[3]:
 
 
 def extract_station_name(message_text):
@@ -40,11 +48,13 @@ def extract_station_name(message_text):
     for match in matches:
         # return the first captured phrase
         # which is between "on" and "station"
-        return match.group(1), match.group(2) 
+        return match.group(1)
     
     # if there were no matches, return None
     return None
 
+
+# In[4]:
 
 
 def get_current_citibike_data_from_api(station_name):
@@ -66,6 +76,9 @@ def get_current_citibike_data_from_api(station_name):
             if station_name in entry["stationName"] and entry['statusValue'] == "In Service"
     ]
     return result
+
+
+# In[5]:
 
 
 def get_historic_citibike_data(station_id):
@@ -104,7 +117,7 @@ def get_historic_citibike_data(station_id):
 # In[6]:
 
 
-def plot_station_data(station_id, address):
+def plot_station_data(station_id, address, bikes_available):
     '''
     This function takes as input the station_id and creates a plot of the historic data
     '''
@@ -117,6 +130,14 @@ def plot_station_data(station_id, address):
     # Get the Pandas dataframe with the average historic data and create a plot
     df = get_historic_citibike_data(station_id)
     ax = df.plot(legend=False)
+
+    # we plot a vertical red line at the current time
+    ax.axvline(x=hour, color='r', linestyle='--')
+    
+    # we add a  marker on the current level of bike availability
+    # we just plot a single market at the (x,y) = (hour, bikes_available) location
+    # using a red circle marker (shape "o") with red color and blue edges
+    ax.plot(hour, bikes_available, marker='o', color='r', markeredgecolor='b', markersize=10)
     
     # Various options, just to customize the plot
     plot_title = 'Station #'+ str(station_id) + ' on ' + address + '\nAverage Availability for '+ dow
@@ -125,7 +146,7 @@ def plot_station_data(station_id, address):
     ax.xaxis.set_ticks([0,4,8,12,16,20,24]) # select which values to show on the x-axis
     ax.grid(b=True, linestyle='--', color='#cccccc') # We want a light gray grid with dotted lines
     ax.set_ylabel("Available Bikes")
-    ax.axvline(x=hour, color='r', linestyle='--') # we plot a vertical red line at the current time
+    
 
     # Save the plot and return its url
     fig = ax.get_figure()
@@ -138,7 +159,7 @@ def plot_station_data(station_id, address):
     return url
 
 
-# In[19]:
+# In[7]:
 
 
 def create_message(station_name):
@@ -151,7 +172,7 @@ def create_message(station_name):
     if station_name != None:
         # We want to address the user with the username. Potentially, we can also check
         # if the user has added a first and last name, and use these instead of the username
-        message = "Thank you for asking about the station on " + station_name
+        message = "Thank you for asking about the station on " + station_name + ". "
 
         # Let's get the data from the Citibike API
         # We search for stations that match "station_name"
@@ -178,7 +199,7 @@ def create_message(station_name):
             bikes = station['available']
             # We get the plot from the historic data in our database
             # and we get the URL where we can access the plot
-            url = plot_station_data(station_id, address)
+            url = plot_station_data(station_id, address, bikes)
             attachment = {
                 "image_url": url,
                 "title": "Historic data for station #{sid} at {a}".format(sid=station_id, a=address),
@@ -192,7 +213,7 @@ def create_message(station_name):
     return message, attachments
 
 
-# In[20]:
+# In[8]:
 
 
 def process_slack_event(event):
@@ -230,7 +251,7 @@ def process_slack_event(event):
     return message, attachments
 
 
-# In[21]:
+# In[9]:
 
 
 # This is the beginning of the program. We just read read 
@@ -249,7 +270,7 @@ sc = SlackClient(auth_token)
 sc.rtm_connect()
 
 
-# In[22]:
+# In[10]:
 
 
 
