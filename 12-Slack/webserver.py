@@ -66,7 +66,6 @@ def oauth_helper():
     # Normally, we would just redirect the user to a "Thank you" page.
     return '<html><body>Code: <b>'+code+'</b><p>Response:<b>'+resp.text+'</b></body></html>'
 
-
 def stop_server():
     shutdown_after_request = request.environ.get('werkzeug.server.shutdown')
     shutdown_after_request()
