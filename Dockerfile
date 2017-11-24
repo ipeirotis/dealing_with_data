@@ -1,6 +1,5 @@
-# A base docker image that includes a Jupyter server running
+# A base docker image that includes a Jupyter server 
 # 
-# docker build --network=host -t dwd NYU
 # 
 
 FROM ubuntu:latest
@@ -45,35 +44,72 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# install Python libraries
+# install latest version of pip
 RUN pip3 install -U pip 
 
 # TODO: Move the Python libraries to a requirements.txt file?
-# install Python libraries
+
+# install basic Python libraries to run Jupyter
 RUN pip3 install -U \
-	pip \
 	jupyter \
-	ipython \
-	jellyfish \
+	ipython 
+	
+# add libraries used in intro to python exercise
+RUN pip3 install -U jellyfish \
 	ngram \
+
+# add standard data science libraries
+RUN pip3 install -U \
 	numpy \
 	scipy \
 	matplotlib \
 	pandas \
+	statsmodels \
+	scikit-learn
+
+# add libraries for teaching web APIs 
+RUN pip3 install -U \
 	requests \
 	requests_oauthlib \
-	statsmodels \
-	spacy \
-	nltk \
 	Flask \
+	slackclient 
+	
+# add libraries for NLP
+RUN pip3 install -U \
+	spacy \ 
+	nltk \
+	gensim 
+
+# add libraries for visualization/mapping
+RUN pip3 install -U \
+	seaborn \
+	bokeh \
+	folium \
+	geopandas \
+	geopy
+
+# add libraries for finance
+RUN pip3 install -U \
+	googlefinance \
+	yahoo-finance \
+	quandl
+
+# misc libraries 
+RUN pip3 install -U \
 	boto \
 	boto3 \
-	elasticsearch  folium  gensim  geopy  geopandas googlefinance  networkx   py2neo  pymongo  selenium  slackclient tweepy  yahoo-finance 
+	elasticsearch \
+	networkx \
+	py2neo \
+	pymongo \
+	selenium \
+	tweepy  
 
 # Add a notebook profile.
 RUN mkdir -p -m 700 /root/.jupyter/ && \
     echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py && \
-    echo "c.NotebookApp.notebook_dir = '/notebooks'" >> /root/.jupyter/jupyter_notebook_config.py
+    echo "c.NotebookApp.notebook_dir = '/notebooks'" >> /root/.jupyter/jupyter_notebook_config.py && \
+    echo "c.NotebookApp.password = 'sha1:44967f2c7dbb:4ae5e013fa8bae6fd8d4b8fa88775c0c5caeffbf'" >> /root/.jupyter/jupyter_notebook_config.py
 
 WORKDIR /notebooks
 RUN ["git", "clone", "--verbose", "https://github.com/ipeirotis/dealing_with_data.git", "/notebooks"]
