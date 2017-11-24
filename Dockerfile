@@ -56,7 +56,7 @@ RUN pip3 install -U \
 	
 # add libraries used in intro to python exercise
 RUN pip3 install -U jellyfish \
-	ngram \
+	ngram
 
 # add standard data science libraries
 RUN pip3 install -U \
