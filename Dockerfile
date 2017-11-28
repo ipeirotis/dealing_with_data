@@ -119,8 +119,40 @@ WORKDIR /data
 RUN ["git", "clone", "--verbose", "https://github.com/ipeirotis/data.git", "/data"]
 # VOLUME /data
 
-EXPOSE 8888
+ENV MYSQL_USER=mysql \
+    MYSQL_DATA_DIR=/var/lib/mysql \
+    MYSQL_RUN_DIR=/var/run/mysqld \
+    MYSQL_LOG_DIR=/var/log/mysql
+        
+ENV MYSQL_ROOT_PASSWORD='dwdstudent2015' 
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update \
+	&& apt-get install -y mysql-server \
+	&& apt-get install -y python3-mysqldb \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf ${MYSQL_DATA_DIR} \
+	&& mkdir -p ${MYSQL_DATA_DIR} ${MYSQL_RUN_DIR} \
+	&& chown -R mysql:mysql ${MYSQL_DATA_DIR} ${MYSQL_RUN_DIR} \
+	&& chmod 777 ${MYSQL_RUN_DIR} \
+	&& echo '[mysqld]\nskip-host-cache\nskip-name-resolve\nuser=mysql' > /etc/mysql/conf.d/docker.cnf
+
+RUN pip3 install ipython-sql
+
+RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
+
+RUN mysqld --initialize-insecure --user=mysql 
+
+RUN chown -R mysql:mysql ${MYSQL_DATA_DIR} ${MYSQL_RUN_DIR} && \
+    service mysql start & sleep 5 \
+    && zcat /data/facebook.sql.gz | mysql -uroot \
+    && zcat /data/imdb.sql.gz | mysql -uroot \
+    && echo "use mysql; ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';" | mysql -uroot
+    
+EXPOSE 3306 8888 
 
 LABEL org.jupyter.service="jupyter"
 
-CMD ["jupyter", "notebook", "--no-browser", "--allow-root"]
+ENTRYPOINT chown -R mysql:mysql ${MYSQL_DATA_DIR} ${MYSQL_RUN_DIR}; service mysql start
+ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--allow-root"]
