@@ -138,7 +138,7 @@ RUN apt-get update \
 	&& chmod 777 ${MYSQL_RUN_DIR} \
 	&& echo '[mysqld]\nskip-host-cache\nskip-name-resolve\nuser=mysql' > /etc/mysql/conf.d/docker.cnf
 
-RUN pip3 install ipython-sql
+RUN pip3 install ipython-sql sql_magic
 
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
