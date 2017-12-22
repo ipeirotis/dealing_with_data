@@ -1,0 +1,6 @@
+proxy:
+    secretToken: "YOUR_TOKEN_HERE"
+singleuser:
+    image:
+        name: HUB_REPOSITORY
+        tag: IMAGE_TAG
