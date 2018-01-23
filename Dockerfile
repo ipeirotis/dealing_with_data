@@ -103,7 +103,8 @@ RUN pip3 install -U \
 	py2neo \
 	pymongo \
 	selenium \
-	tweepy  
+	tweepy \
+    xlwt
 
 # Add a notebook profile.
 RUN mkdir -p -m 700 /root/.jupyter/ && \
@@ -138,17 +139,15 @@ RUN apt-get update \
 	&& chmod 777 ${MYSQL_RUN_DIR} \
 	&& echo '[mysqld]\nskip-host-cache\nskip-name-resolve\nuser=mysql' > /etc/mysql/conf.d/docker.cnf
 
-RUN pip3 install ipython-sql sql_magic
+RUN pip3 install -U ipython-sql sql_magic
 
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
 RUN mysqld --initialize-insecure --user=mysql 
 
 RUN chown -R mysql:mysql ${MYSQL_DATA_DIR} ${MYSQL_RUN_DIR} && \
-    service mysql start & sleep 5 \
-    && zcat /data/facebook.sql.gz | mysql -uroot \
-    && zcat /data/imdb.sql.gz | mysql -uroot \
-    && echo "use mysql; ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';" | mysql -uroot
+    service mysql start & sleep 5 && \
+    echo "use mysql; ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';" | mysql -uroot
     
 EXPOSE 3306 8888 
 
