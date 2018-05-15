@@ -6,3 +6,4 @@
 * [Time Series Analysis in Python with statsmodels](http://conference.scipy.org/scipy2011/slides/mckinney_time_series.pdf)
 * [A Simple Time Series analysis of the S&P 500 Index](http://www.johnwittenauer.net/a-simple-time-series-analysis-of-the-sp-500-index/) (demonstrates the use of seasonal/trend decomposition)
 * [Statistical forecasting: notes on regression and time series analysis](http://people.duke.edu/~rnau/411home.htm)
+* [The 7 Sinc of NYC](https://nycdatascience.com/blog/r/7-sins-in-nyc/)
