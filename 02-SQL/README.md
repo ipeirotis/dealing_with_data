@@ -10,6 +10,7 @@ This is a brief introductory module to relational databases and SQL. It mainly t
 * [Learn SQL](https://www.codecademy.com/learn/learn-sql) and [SQL: Analyzing Business Metrics](https://www.codecademy.com/learn/sql-analyzing-business-metrics): Two short, self-directed online course from Code Academy
 * [SQL Tutorial](http://www.w3resource.com/sql/tutorials.php) 
 * [Learning MySQL](http://shop.oreilly.com/product/9780596008642.do): A useful textbook for those interested in learning more about SQL
+* [W3 Resource](https://www.w3resource.com/sql/tutorials.php): SQL exercises
 
 ## Useful Pointers
 
