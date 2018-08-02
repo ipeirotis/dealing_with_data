@@ -21,7 +21,7 @@ This is a set of notes used for teaching Python to students that have never used
 * [DataCamp, Intro to Python for Data Science](https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1)
 * [DataQuest, Python Basics](https://www.dataquest.io/mission/1/python-basics)
 
-## Addi
+## Additional Pointers
 
 * [Official Python 2 Tutorial](https://docs.python.org/3/tutorial/index.html)
 * [Python Tutor](http://www.pythontutor.com/)
