@@ -1,20 +1,23 @@
 
 ## Interesting data sources
-* [NASDAQ](https://data.nasdaq.com/)
-* [CBOE Futures Exchange](http://cfe.cboe.com/Data/)
+* Yelp APIs: [Yelp Fusion](https://www.yelp.com/developers/documentation/v3) and [Yelp GraphQL](https://www.yelp.com/developers/graphql/guides/intro)
+* [US Census API](https://www.census.gov/data/developers/data-sets.html) and [US Census Data](http://www.census.gov/data.html)
+* [Twitter API](https://developer.twitter.com/en/docs.html)
+* [Spotify API](https://developer.spotify.com/documentation/web-api/)
+* [NYC Open Data](https://data.cityofnewyork.us/)
+* [U.S. Government’s open data](https://www.data.gov/)
+* [The New York Times Data APIs](http://developer.nytimes.com/docs)
 * [Quandl: Finance and Economics Data](http://www.quandl.com/)
-* [Enron Email Dataset](http://www.cs.cmu.edu/~enron/)
 * [Lending Club](https://www.lendingclub.com/info/download-data.action)
 * [World Bank Data](http://data.worldbank.org/)
 * [Unicef Data](http://www.unicef.org/sowc09/statistics/tables.php)
-* [US Census Data](http://www.census.gov/data.html)
 * [Yahoo Labs Data](http://webscope.sandbox.yahoo.com/catalog.php)
 * [World Health Organization](http://www.who.int/research/en/)
-* [The New York Times Data APIs](http://developer.nytimes.com/docs)
 * [Weather Underground Data API](http://www.wunderground.com/weather/api/?MR=1)
-* [NYC Open Data](https://data.cityofnewyork.us/)
-* [U.S. Government’s open data](https://www.data.gov/)
 * [Google Public Data Explorer](http://www.google.com/publicdata/directory)
+* [NASDAQ](https://data.nasdaq.com/)
+* [CBOE Futures Exchange](http://cfe.cboe.com/Data/)
+* [Enron Email Dataset](http://www.cs.cmu.edu/~enron/)
 
 
 ## Aggregate lists of data sets
