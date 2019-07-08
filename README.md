@@ -14,6 +14,6 @@ We setup and deploy our data science environment (effectively, Jupyter with Pyth
 
 * [List of related courses](COURSES.md)
 
-## Licese
+## License
 
 * See [LICENSE](LICENSE)
