@@ -21,6 +21,7 @@
 
 
 ## Aggregate lists of data sets
+* [Kaggle Datasets](https://www.kaggle.com/datasets)
 * [Data Collaboratives](http://datacollaboratives.org/explorer.html)
 * [30 Places to Find Open Data on the Web, by Romy Misra of Visual.ly](http://blog.visual.ly/data-sources/)
 * [Interesting datasets and APIs, by Prof. James Bagrow](http://bagrow.com/dsv/datasets.html)
