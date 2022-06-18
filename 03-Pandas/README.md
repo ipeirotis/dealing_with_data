@@ -1,5 +1,5 @@
 TODO:
-* Make the notebooks A-* to be "Introduction to Data Analysis through Examples"
+
 * Add examples for temporal decomposition of the accidents time series
 * Add examples for spatial joins and data cleaning (e.g. many "manhattan accodents are not in manhattan"
 
