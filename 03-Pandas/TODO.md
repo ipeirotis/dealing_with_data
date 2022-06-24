@@ -4,9 +4,9 @@
 * Split in a variety of topics
 
 1. Input and output
-1a. Read_sql (various queries), play a bit with head/tail and UI. Explain the concept of variables and dataframes
-1b. The content of B1 but without the transformations
-1c. Minimal example of writing to SQL
+* Read_sql (various queries), play a bit with head/tail and UI. Explain the concept of variables and dataframes
+* The content of B1 but without the transformations
+* Minimal example of writing to SQL
 
 2. Descriptive statistics and plots (histograms, KDE, line plots, bar plots, scatterplots, 2d histograms, 2d density plots)
 * Single-variable descriptive statistics for numeric/dates (histograms + KDE)
