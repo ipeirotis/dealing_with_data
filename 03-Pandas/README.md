@@ -1,9 +1,3 @@
-## Ideas for notebooks
-
-* Add examples for temporal decomposition of the accidents time series
-* Add examples for spatial joins and data cleaning (e.g. many "manhattan accodents are not in manhattan"
-
-
 
 ## Tidy Data
 
@@ -17,3 +11,5 @@
 * [Cheat sheets for Pandas](https://medium.com/@kailashahirwar/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5)
 * [fecon235 :: Computational data tools for financial economics](https://github.com/rsvp/fecon235)
 * [The 7 Sinc of NYC](https://nycdatascience.com/blog/r/7-sins-in-nyc/)
+
+
