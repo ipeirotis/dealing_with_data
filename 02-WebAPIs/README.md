@@ -1,7 +1,17 @@
+
+## TODO
+
+* After the initial discussion of the APIs (GeoIP and OpenweatherMap), discuss two types of APIs:
+1. Useful APIs for accessing data (NewsAPI, Yelp, US Census, Yelp) 
+2. Useful APIs for processing data (Google NLP, Census Geocoding an address)
+
+* Replace IBM Watson API with Google NLP https://cloud.google.com/natural-language/docs/reference/rest
+
+## Check these out
+
 * List of public APIs: https://github.com/public-apis/public-apis
 
 * Tutorial for Web APIs: https://github.com/nestauk/im-tutorials/tree/3-ysi-tutorial/notebooks/APIs
-
 
 ## New APIs:
 
