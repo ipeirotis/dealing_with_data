@@ -35,7 +35,14 @@
 <!-- The javascript code that calls the API-->
 <script>
 
-fetch("/citibike_api")
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const station_name_query = urlParams.get('name')
+
+<!-- If there is a parameter passed in the URL, we add a query component to the API query
+const api_query = (station_name_query? "?name="+station_name_query : "") 
+
+fetch("/citibike_api" + api_query)
 .then(function(response){
    return response.json();
 })
