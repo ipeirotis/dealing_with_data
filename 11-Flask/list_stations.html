@@ -6,94 +6,144 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
+<!-- 
+  This part of the HTML checks if the webpage has a query 
+  component (i.e., a "?station_name=...." part). 
+  If there is a station_name param, we populate the api_call_params
+  which we will use to call the API
+-->
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const station_name_param = urlParams.get('station_name');
+
+api_call_params = new URLSearchParams();
+if (station_name_param) {
+ api_call_params= new URLSearchParams({
+    station_name_query: station_name_param,
+  })
+};
+
+</script>
+
 <body>
   <div class="container">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h1 class="panel-title">Citibike Stations</h1>
+        <h1 class="panel-title" align="center">Citibike Stations</h1>
       </div>
 
       <div class="container">
         <div class="panel panel-info">
           <div class="panel-heading" align="center">
-            <h1>
+            
+              <!-- This is the entry for the search form -->
               <form action="/list_stations">
-                Station Name<br>
-                <input type="text" name="name"><br>
-                <input class="btn btn-primary" type="submit" value="Submit">
+                Station Name:
+                <input type="text" name="station_name">
+                <input class="btn btn-primary btn-sm" type="submit" value="Submit">
               </form>
-            </h1>
+              <!-- end of the web form -->
+
           </div>
         </div>
       </div>
 
 
-      <div>
-        <img id="station_map" class="center-block" />
+      <!-- This is the placeholder for the plot of of the stations -->
+      <!-- We will fill it using Javascript, by calling the API call --> 
+      <!-- that returns back the image --> 
+      <div align="center">
+        <img id="station_map_placeholder" class="center-block" />
       </div>
+      
+      
+      <!-- The javascript code that calls the API call /station_map -->
+      <!-- to fill the image placeholder with the actual image  -->
+      <script>
+      // Calls the "/station_map" API call and gets back the response
+      fetch("/station_map?" + api_call_params)
+      .then(function(response){
+         // Parse API response as a JSON object
+         return response.json();
+      })
+      .then(function(data){
+         // The "data" is the JSON response of the API call
+        
+         // Find the HTML tag that has the id="station_map_placeholder"
+         let map_image_html_tag = document.querySelector("#station_map_placeholder");
+        
+        // The "data" object contains the JSON response of the API
+        // We get the "image_data" key from the JSON response and fill 
+        // the value of the "src" attribute of the HTML <img> tag. 
+         map_image_html_tag.src = data.image_data;
+      });
+      </script>
 
+
+
+
+
+      <!-- This table will be used to display the results of the Citibike stations -->
+      <!-- We do not have to use a table, we can create other approaches -->
+      <!-- for showing the data (e.g., create one "box" or "card" for each station) --> 
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Price</th>
-            <th>Lat</th>
-            <th>Lon</th>
+            <th>Capacity</th>
           </tr>
         </thead>
+        <!-- Placeholder for the list of Citibike stations -->
         <tbody id="data-output">
-          <!-- List of stations from javascript file in here. -->
+          <!-- We will put the list of stations from the API call here. -->
         </tbody>
       </table>
+
+      <!-- 
+        This is the Javascript code that will call
+        the /citibike_api (with the necessary parameters)
+        and then populate the table   
+      --> 
+      <script>
+      // Calls the /citibike_api API call and gets back the JSON
+      fetch("/citibike_api?" + api_call_params)
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data){
+        // The "data" is the JSON response of the API call
+
+        // Find the HTML table with id="#data-output"
+        let row_placeholder = document.querySelector("#data-output");
+
+        // We will create a list of rows for the table 
+        // using the loop below (one table row per station)
+        let table_rows = "";
+        for(let s of data.stations){
+            table_rows += `
+              <tr>
+                  <td>${s.id}</td>
+                  <td>${s.name}</td>
+                  <td>${s.capacity}</td>
+              </tr>
+            `;
+        }
+
+        // And now we populate the table by adding the list
+        // of rows that we created
+        row_placeholder.innerHTML = table_rows;
+      });
+      </script>
+
+
     </div>
   </div>
 </body>
 
 
-<!-- The javascript code that calls the API-->
-<script>
-
-fetch("/station_map")
-.then(function(response){
-   return response.json();
-})
-.then(function(data){
-   let map_image = document.querySelector("#station_map");
-   map_image.src = `data:image/png;base64,`+data.image;
-});
-</script>
-
-<script>
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const station_name_query = urlParams.get('name');
-
-<!-- If there is a parameter passed in the URL, we add a query component to the API query
-const api_query = (station_name_query? "?name="+station_name_query : "");
-
-fetch("/citibike_api" + api_query)
-.then(function(response){
-   return response.json();
-})
-.then(function(data){
-   let placeholder = document.querySelector("#data-output");
-   let out = "";
-   for(let s of data.stations){
-      out += `
-         <tr>
-            <td>${s.id}</td>
-            <td>${s.name}</td>
-            <td>${s.capacity}</td>
-            <td>${s.lat}</td>
-            <td>${s.lon}</td>
-         </tr>
-      `;
-   }
-   placeholder.innerHTML = out;
-});
 
 
-</script>
 
 </html>
