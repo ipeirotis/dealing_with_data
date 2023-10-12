@@ -1,3 +1,4 @@
+# Import necessary libraries
 import base64
 from io import BytesIO
 
@@ -21,7 +22,9 @@ engine = create_engine(conn_string)
 
 @app.route('/citibike_api', methods=['GET'])
 def citibike_stations():
-
+  """
+    API endpoint to get Citibike station details from the database.
+    """
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   # Connect to the database, execute the query, and get back the results
   with engine.connect() as connection:
@@ -39,7 +42,9 @@ def citibike_stations():
 
 @app.route('/station_map', methods=['GET'])
 def station_map():
-
+  """
+    API endpoint to get a scatter plot of Citibike stations on a map.
+    """
   # Connect to the database, execute the query, and get back the results
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   with engine.connect() as connection:
@@ -60,12 +65,12 @@ def station_map():
   # We JSON-ify our dictionary and return it as the API response
   return jsonify(results)
 
-  # return f"<img src='data:image/png;base64,{data}'/>"
-
 
 @app.route('/station_status')
 def station_status():
-
+  """
+    API endpoint to get the status of a specific Citibike station.
+    """
   param = request.args.get('station_id')
   try:
     param_value = int(param)
@@ -99,17 +104,20 @@ def station_status():
 # Main page
 @app.route("/")
 def index():
+  """
+    Main page of the web application.
+    """
   page = '''
-  <html>
-  <body>
-    <a href="/citibike_api">Citibike API</a>
-    <p>
-    <a href="/station_map">Citibike Map as API call</a>
-    <p>
-    <a href="/station_status?station_id=72">Status of Station 72</a>
-  </body>
-  </html>
-  '''
+    <html>
+    <body>
+        <a href="/citibike_api">Citibike API</a>
+        <p>
+        <a href="/station_map">Citibike Map as API call</a>
+        <p>
+        <a href="/station_status?station_id=72">Status of Station 72</a>
+    </body>
+    </html>
+    '''
 
   return page
 
