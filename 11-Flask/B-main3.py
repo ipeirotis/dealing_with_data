@@ -23,8 +23,8 @@ engine = create_engine(conn_string)
 @app.route('/citibike_api', methods=['GET'])
 def citibike_stations():
   """
-  API endpoint to get Citibike station details from the database.
-  """
+    API endpoint to get Citibike station details from the database.
+    """
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   # Connect to the database, execute the query, and get back the results
   with engine.connect() as connection:
@@ -43,8 +43,8 @@ def citibike_stations():
 @app.route('/station_map', methods=['GET'])
 def station_map():
   """
-  API endpoint to get a scatter plot of Citibike stations on a map.
-  """
+    API endpoint to get a scatter plot of Citibike stations on a map.
+    """
   # Connect to the database, execute the query, and get back the results
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   with engine.connect() as connection:
@@ -69,37 +69,37 @@ def station_map():
 @app.route('/station_status')
 def station_status():
   """
-  API endpoint to get the status of a specific Citibike station.
+    API endpoint to get the status of a specific Citibike station.
   """
+  # Get the station ID from the URL parameters
   param = request.args.get('station_id')
   try:
     param_value = int(param)
   except:
     return jsonify({"error": "No station_id parameter given or other problem"})
-
+  
   sql = '''SELECT available_bikes,
                       available_docks,
                       capacity,
                       available_bikes / capacity AS percent_full,
                       communication_time
                FROM status_fall2017
-               WHERE id = %(station_id)s'''
-
+               WHERE id = :station_id'''
+  
   with engine.connect() as con:
-    station_status = pd.read_sql(sql,
+    station_status = pd.read_sql(text(sql),
                                  con=con,
                                  params={"station_id": param_value})
-
+  
   station_status_over_time = station_status.to_dict(orient='records')
-
+  
   api_results = {
       "station_id": param_value,
       "status_over_time": station_status_over_time
   }
-
+  
   # We JSON-ify our dictionary and return it as the API response
   return jsonify(api_results)
-
 
 # Main page
 @app.route("/")
