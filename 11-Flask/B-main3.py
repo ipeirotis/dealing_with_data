@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from flask import Flask, jsonify, request
 from sqlalchemy import create_engine, text
+import pymysql
 
 app = Flask(__name__)
 
