@@ -23,8 +23,8 @@ engine = create_engine(conn_string)
 @app.route('/citibike_api', methods=['GET'])
 def citibike_stations():
   """
-    API endpoint to get Citibike station details from the database.
-    """
+  API endpoint to get Citibike station details from the database.
+  """
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   # Connect to the database, execute the query, and get back the results
   with engine.connect() as connection:
@@ -43,8 +43,8 @@ def citibike_stations():
 @app.route('/station_map', methods=['GET'])
 def station_map():
   """
-    API endpoint to get a scatter plot of Citibike stations on a map.
-    """
+  API endpoint to get a scatter plot of Citibike stations on a map.
+  """
   # Connect to the database, execute the query, and get back the results
   sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
   with engine.connect() as connection:
@@ -69,8 +69,8 @@ def station_map():
 @app.route('/station_status')
 def station_status():
   """
-    API endpoint to get the status of a specific Citibike station.
-    """
+  API endpoint to get the status of a specific Citibike station.
+  """
   param = request.args.get('station_id')
   try:
     param_value = int(param)
