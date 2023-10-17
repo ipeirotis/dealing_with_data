@@ -65,6 +65,28 @@ def station_map():
 
   # We JSON-ify our dictionary and return it as the API response
   return jsonify(results)
+  
+@app.route('/station_image', methods=['GET'])
+def station_image():
+  """
+    API endpoint to get a scatter plot of Citibike stations on a map.
+    """
+  # Connect to the database, execute the query, and get back the results
+  sql = "SELECT DISTINCT id, name, capacity, lat, lon  FROM status_fall2017"
+  with engine.connect() as connection:
+    stations = pd.read_sql(text(sql), con=connection)
+
+  fig, ax = plt.subplots()
+  ax = stations.plot(kind='scatter', x='lon', y='lat', ax=ax)
+
+  buf = BytesIO()
+  fig.savefig(buf, format="png")
+  # Embed the result in the html output.
+  data = base64.b64encode(buf.getbuffer()).decode("ascii")
+
+  # Return an image
+  return f"<img src='data:image/png;base64,{data}'/>"
+
 
 
 @app.route('/station_status')
@@ -78,7 +100,7 @@ def station_status():
     param_value = int(param)
   except:
     return jsonify({"error": "No station_id parameter given or other problem"})
-  
+
   sql = '''SELECT available_bikes,
                       available_docks,
                       capacity,
@@ -86,19 +108,19 @@ def station_status():
                       communication_time
                FROM status_fall2017
                WHERE id = :station_id'''
-  
+
   with engine.connect() as con:
     station_status = pd.read_sql(text(sql),
                                  con=con,
                                  params={"station_id": param_value})
-  
+
   station_status_over_time = station_status.to_dict(orient='records')
-  
+
   api_results = {
       "station_id": param_value,
       "status_over_time": station_status_over_time
   }
-  
+
   # We JSON-ify our dictionary and return it as the API response
   return jsonify(api_results)
 
@@ -114,6 +136,8 @@ def index():
         <a href="/citibike_api">Citibike API</a>
         <p>
         <a href="/station_map">Citibike Map as API call</a>
+        <p>
+        <a href="/station_image">Citibike Map as an image</a>
         <p>
         <a href="/station_status?station_id=72">Status of Station 72</a>
     </body>
