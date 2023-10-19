@@ -97,6 +97,7 @@ if (station_name_param) {
         </thead>
         <!-- Placeholder for the list of Citibike stations -->
         <tbody id="data-output">
+          <tr id="loading-row"><td align="center" colspan="5"><div class="spinner-border text-primary" role="status"></div></td></tr>
           <!-- We will put the list of stations from the API call here. -->
         </tbody>
       </table>
@@ -134,6 +135,7 @@ if (station_name_param) {
         // And now we populate the table by adding the list
         // of rows that we created
         row_placeholder.innerHTML = table_rows;
+        document.getElementById("loading-row").remove();
       });
       </script>
 
