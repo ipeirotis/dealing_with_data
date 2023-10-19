@@ -96,20 +96,25 @@ if (station_name_param) {
           </tr>
         </thead>
         <!-- Placeholder for the list of Citibike stations -->
+        <!-- Notice the use of id="data-output" that will allow us to reference that HTML part later -->
         <tbody id="data-output">
-          <tr id="loading-row"><td align="center" colspan="5"><div class="spinner-border text-primary" role="status"></div></td></tr>
+          <!-- The line below puts a "spinner" to show that content is loading  -->
+          <tr id="loading-row">
+            <td align="center" colspan="5">
+              Loading...<div class="spinner-border text-primary" role="status"></div>
+            </td>
+          </tr>
           <!-- We will put the list of stations from the API call here. -->
         </tbody>
       </table>
 
       <!-- 
         This is the Javascript code that will call
-        the /citibike_api (with the necessary parameters)
-        and then populate the table   
+        the /citibike_api and then populate the table   
       --> 
       <script>
       // Calls the /citibike_api API call and gets back the JSON
-      fetch("/citibike_api?" + api_call_params)
+      fetch("/citibike_api")
       .then(function(response){
         return response.json();
       })
