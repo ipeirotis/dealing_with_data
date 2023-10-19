@@ -54,6 +54,10 @@ if (station_name_param) {
       <!-- We will fill it using Javascript, by calling the API call --> 
       <!-- that returns back the image --> 
       <div align="center">
+        <div id="loading-map">
+          Loading map...
+          <div class="spinner-border text-primary" role="status"></div>
+        </div>
         <img id="station_map_placeholder" class="center-block" />
       </div>
       
@@ -62,7 +66,7 @@ if (station_name_param) {
       <!-- to fill the image placeholder with the actual image  -->
       <script>
       // Calls the "/station_map" API call and gets back the response
-      fetch("/station_map?" + api_call_params)
+      fetch("/station_map")
       .then(function(response){
          // Parse API response as a JSON object
          return response.json();
@@ -76,7 +80,9 @@ if (station_name_param) {
         // The "data" object contains the JSON response of the API
         // We get the "image_data" key from the JSON response and fill 
         // the value of the "src" attribute of the HTML <img> tag. 
-         map_image_html_tag.src = data.image_data;
+         map_image_html_tag.src = 'data:image/png;base64,' + data.image;
+
+         document.getElementById("loading-map").remove();
       });
       </script>
 
