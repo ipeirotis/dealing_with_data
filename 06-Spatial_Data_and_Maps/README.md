@@ -1,2 +1,10 @@
+# TODO
+
+* Consider reading shapefiles from the bigquery public datasets. For example `bigquery-public-data.geo_us_boundaries.states`.
+* Consider loading shapefiles in a public Bigquery dataset. The public datasets from Google contain states and counties, but no tracks, blockgroups, or blocks. Also they do not have the "no water" versions.
+
+* 
+
+
 * https://eng.uber.com/h3/ 
 * https://georeference.org/doc/zip_codes_are_not_areas.htm
