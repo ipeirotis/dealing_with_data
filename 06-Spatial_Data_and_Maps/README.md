@@ -1,3 +1,9 @@
+# Course Notes
+
+* [Spatial data science for sustainable development, Aalto University](https://sustainability-gis.readthedocs.io/en/latest/index.html)
+* [Introduction to Python for Geographic Data Analysis](https://pythongis.org/)
+* [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html)
+
 # Resources
 
 * [The H3 system of Uber](https://eng.uber.com/h3/)
