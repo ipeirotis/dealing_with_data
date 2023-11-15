@@ -6,6 +6,7 @@
 
 # Resources
 
+* [What are the census tracts?](https://www2.census.gov/geo/pdfs/education/CensusTracts.pdf)
 * [The H3 system of Uber](https://eng.uber.com/h3/)
 * [Zip codes are not areas](https://georeference.org/doc/zip_codes_are_not_areas.htm)
 
