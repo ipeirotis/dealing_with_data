@@ -20,7 +20,7 @@ const station_name_param = urlParams.get('station_name');
 api_call_params = new URLSearchParams();
 if (station_name_param) {
  api_call_params= new URLSearchParams({
-    station_name_query: station_name_param,
+    station_name: station_name_param,
   })
 };
 
@@ -33,21 +33,16 @@ if (station_name_param) {
         <h1 class="panel-title" align="center">Citibike Stations</h1>
       </div>
 
-      <div class="container">
-        <div class="panel panel-info">
-          <div class="panel-heading" align="center">
-            
-              <!-- This is the entry for the search form -->
-              <form action="/list_stations">
-                Station Name:
-                <input type="text" name="station_name">
-                <input class="btn btn-primary btn-sm" type="submit" value="Submit">
-              </form>
-              <!-- end of the web form -->
 
-          </div>
-        </div>
-      </div>
+      <!-- This is the entry for the search form -->
+      <h1 class="panel-title" align="center">
+      <form action="/list_stations">
+        Station Name:
+        <input type="text" name="station_name">
+        <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+      </form>
+      </h1>
+      <!-- end of the web form -->
 
 
       <!-- This is the placeholder for the plot of of the stations -->
@@ -66,7 +61,7 @@ if (station_name_param) {
       <!-- to fill the image placeholder with the actual image  -->
       <script>
       // Calls the "/station_map" API call and gets back the response
-      fetch("/station_map")
+      fetch("/station_map?" + api_call_params)
       .then(function(response){
          // Parse API response as a JSON object
          return response.json();
@@ -120,7 +115,7 @@ if (station_name_param) {
       --> 
       <script>
       // Calls the /citibike_api API call and gets back the JSON
-      fetch("/citibike_api")
+      fetch("/citibike_api?" + api_call_params)
       .then(function(response){
         return response.json();
       })
