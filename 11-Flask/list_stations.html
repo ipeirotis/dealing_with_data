@@ -35,13 +35,26 @@ if (station_name_param) {
 
 
       <!-- This is the entry for the search form -->
-      <h1 class="panel-title" align="center">
+      <h3 class="panel-title" align="center">
       <form action="/list_stations">
-        Station Name:
+        <label for="station_name">Station Name:</label>
         <input type="text" name="station_name">
         <input class="btn btn-primary btn-sm" type="submit" value="Submit">
       </form>
-      </h1>
+
+      <form action="/station_history">
+        <label for="station_id">Choose station:</label>
+        <select id="station_id" name="station_id">
+          {% for s in stations %}
+          <option value="{{s.id}}">{{s.name}}</option>
+          {% endfor %}
+        </select>
+        <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+
+      </form>
+
+      
+      </h3>
       <!-- end of the web form -->
 
 
@@ -132,7 +145,7 @@ if (station_name_param) {
             table_rows += `
               <tr>
                   <td>${s.id}</td>
-                  <td>${s.name}</td>
+                  <td><a href="station_history?station_id=${s.id}">${s.name}</td>
                   <td>${s.capacity}</td>
               </tr>
             `;
