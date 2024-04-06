@@ -6,3 +6,4 @@ Useful links
 * [Statistical forecasting: notes on regression and time series analysis](http://people.duke.edu/~rnau/411home.htm)
 * [Timeseries Classification: KNN & DTW](http://nbviewer.jupyter.org/github/markdregan/K-Nearest-Neighbors-with-Dynamic-Time-Warping/blob/master/K_Nearest_Neighbor_Dynamic_Time_Warping.ipynb)
 * [Financial data analysis with Pandas.](http://nbviewer.jupyter.org/gist/twiecki/3962843)
+* [TimeGPT](https://docs.nixtla.io/)
