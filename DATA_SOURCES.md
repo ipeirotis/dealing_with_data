@@ -1,5 +1,6 @@
 
 ## Interesting data sources
+* [Public Datasets on Google BigQuery](https://console.cloud.google.com/marketplace/browse;page=1?filter=solution-type:dataset&filter=price:free&hl=en-GB&project=nyu-datasets)
 * Yelp APIs: [Yelp Fusion](https://www.yelp.com/developers/documentation/v3) and [Yelp GraphQL](https://www.yelp.com/developers/graphql/guides/intro)
 * [US Census API](https://www.census.gov/data/developers/data-sets.html) and [US Census Data](http://www.census.gov/data.html)
 * [Twitter API](https://developer.twitter.com/en/docs.html)
