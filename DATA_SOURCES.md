@@ -1,3 +1,14 @@
+## Datasets on BigQuery
+
+* [NYU datasets](https://console.cloud.google.com/bigquery?invt=AbzacQ&project=nyu-datasets&inv=1)
+  * Citibike
+  * DOH restaurant inspection data
+  * Facebook
+  * IMDB
+  * NYPD complaints
+  * ...(others)
+* [Public Datsets on BigQuery](https://console.cloud.google.com/bigquery(cameo:browse)?invt=AbzacQ&project=bigquery-public-data&filter=solution-type:dataset)
+* [Wharton Research Data Services (WRDS)](https://wrds-www.wharton.upenn.edu/)
 
 ## Interesting data sources
 * [Public Datasets on Google BigQuery](https://console.cloud.google.com/marketplace/browse;page=1?filter=solution-type:dataset&filter=price:free&hl=en-GB&project=nyu-datasets)
